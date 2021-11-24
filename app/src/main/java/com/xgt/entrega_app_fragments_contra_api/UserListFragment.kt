@@ -22,11 +22,16 @@ class UserListFragment : Fragment() {
     private val binding
         get() = _binding!!
     private val adapter = UserAdapter {
+
+        var myDate: String = it.dob.date.substring(0, 10)
+        var myAgeShow: Int = it.dob.age
+        var myAge: String = myAgeShow.toString()
+
         val action = UserListFragmentDirections.actionUserListFragmentToUserDetailFragment(
             it.name.first,
             it.name.last,
-            it.dob.date,
-            it.dob.age,
+            myDate,
+            myAge,
             it.location.country,
             it.picture.large
         )

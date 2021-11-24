@@ -29,7 +29,7 @@
             app:argType="string" />
         <argument
             android:name="age"
-            app:argType="integer" />
+            app:argType="string" />
         <argument
             android:name="country"
             app:argType="string" />
