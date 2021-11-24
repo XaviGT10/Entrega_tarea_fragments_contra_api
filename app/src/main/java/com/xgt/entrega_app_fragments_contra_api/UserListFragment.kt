@@ -22,7 +22,14 @@ class UserListFragment : Fragment() {
     private val binding
         get() = _binding!!
     private val adapter = UserAdapter {
-        val action = UserListFragmentDirections.actionUserListFragmentToUserDetailFragment(it.id.name)
+        val action = UserListFragmentDirections.actionUserListFragmentToUserDetailFragment(
+            it.name.first,
+            it.name.last,
+            it.dob.date,
+            it.dob.age,
+            it.location.country,
+            it.picture.large
+        )
         findNavController().navigate(action)
     }
 

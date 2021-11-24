@@ -19,8 +19,22 @@
         android:name="com.xgt.entrega_app_fragments_contra_api.UserDetailFragment"
         android:label="UserDetailFragment"
         tools:layout="@layout/fragment_user_detail">
+        <argument android:name="firstName"
+            app:argType="string" />
         <argument
-            android:name="userId"
+            android:name="surname"
+            app:argType="string" />
+        <argument
+            android:name="birthDate"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="integer" />
+        <argument
+            android:name="country"
+            app:argType="string" />
+        <argument
+            android:name="picture"
             app:argType="string" />
     </fragment>
 </navigation>
